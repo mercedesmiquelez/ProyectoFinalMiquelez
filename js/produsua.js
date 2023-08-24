@@ -1,21 +1,21 @@
-const registro = document.querySelector("#listado");
+const registro = document.querySelector("#registro");
 const butn = document.getElementById("butn");
 
-const pedirProductos = async () => {
+const pedirProducts = async () => {
     const resp = await fetch("./data.json");
     const data = await resp.json();
     console.log(resp, data);
 
-    data.forEach((producto) => {
+    data.forEach((product) => {
         const li = document.createElement("li");
         li.innerHTML = `
-                <h4>${producto.nombre}</h4>
-                <p>${producto.precio}</p>
+                <h4>${product.nombre}</h4>
+                <p>${product.precio}</p>
             `;
             registro.append(li);
     });
 };
-butn.addEventListener("click", pedirProductos);
+butn.addEventListener("click", pedirProducts);
 
 
 const usuarioList = document.querySelector("#listadoUsuarioP");
