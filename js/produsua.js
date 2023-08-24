@@ -2,7 +2,7 @@ const registro = document.querySelector("#registro");
 const butn = document.getElementById("butn");
 
 const pedirProducts = async () => {
-    const resp = await fetch("./data.json");
+    const resp = await fetch("./js/data.json");
     const data = await resp.json();
     console.log(resp, data);
 
@@ -26,11 +26,11 @@ const mostrarUsuariosP = async () => {
     const data = await resp.json();
     console.log(resp, data);
 
-    data.forEach((usuarioP) => {
+    data.results.forEach((usuarioP) => {
         const li = document.createElement("li");
         li.innerHTML = `
-                <h4>${usuarioP.title}</h4>
-                <p>${usuarioP.description}</p>
+                <h4>${usuarioP.name.first}</h4>
+                <p>${usuarioP.location.country}</p>
             `;
             usuarioList.append(li);
     });

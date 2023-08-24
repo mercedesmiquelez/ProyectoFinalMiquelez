@@ -147,7 +147,7 @@ textarea {
     /* 1 */
     line-height: 1.15;
     /* 1 */
-    margin: 0;
+    margin: 10px;
     /* 2 */
 }
 
@@ -160,6 +160,7 @@ button,
 input {
     /* 1 */
     overflow: visible;
+    margin: 10px;
 }
 
 /**
@@ -171,6 +172,7 @@ button,
 select {
     /* 1 */
     text-transform: none;
+    margin: 10px;
 }
 
 /**
@@ -194,6 +196,7 @@ button::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
     border-style: none;
     padding: 0;
+    margin: 10px;
 }
 
 /**
@@ -205,6 +208,7 @@ button:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
     outline: 1px dotted ButtonText;
+    margin: 10px;
 }
 
 /**
